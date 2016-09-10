@@ -125,10 +125,11 @@ GameObject:
   - 114: {fileID: 114000013974862684}
   - 114: {fileID: 114000011329320064}
   - 114: {fileID: 114000012728547180}
-  - 143: {fileID: 143000013468857942}
+  - 143: {fileID: 143000011208217908}
+  - 114: {fileID: 114000010406004922}
   m_Layer: 2
   m_Name: EnnemyUnits
-  m_TagString: Untagged
+  m_TagString: Ennemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -284,7 +285,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012491704986}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.208, y: 0, z: -1.13}
+  m_LocalPosition: {x: 2.34, y: 0, z: 3.72}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -555,6 +556,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114000010406004922
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012491704986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a2050ddf6041dd4db757563b6c30068, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentLife: 0
+  maxLife: 100
 --- !u!114 &114000011329320064
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -566,7 +580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ac18cdd242041b6bebc0e95b624c85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  repathRate: 3
+  repathRate: 50
   target: {fileID: 0}
   canSearch: 1
   canMove: 1
@@ -575,7 +589,7 @@ MonoBehaviour:
   slowdownDistance: 0.006
   pickNextWaypointDist: 0.1
   forwardLook: 0.1
-  endReachedDistance: 0.02
+  endReachedDistance: 0.01
   closestOnPathCheck: 1
 --- !u!114 &114000012728547180
 MonoBehaviour:
@@ -616,7 +630,7 @@ MonoBehaviour:
     tagsChange: -1
     tagsSet: -1
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
---- !u!143 &143000013468857942
+--- !u!143 &143000011208217908
 CharacterController:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -629,7 +643,7 @@ CharacterController:
   m_Height: 2
   m_Radius: 0.01
   m_SlopeLimit: 80
-  m_StepOffset: 0
-  m_SkinWidth: 0.0001
-  m_MinMoveDistance: 0
+  m_StepOffset: 0.03
+  m_SkinWidth: 0.001
+  m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1, z: 0}

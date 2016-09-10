@@ -38,10 +38,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &114000011226809484
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -61,9 +61,7 @@ MonoBehaviour:
   m_LOD: 1
   m_NumUpdatesBeforeRemoval: 10
   m_SecondsBetweenUpdates: 2.5
-  m_Layer:
-    serializedVersion: 2
-    m_Bits: 1
+  m_Layer: 0
   m_Material: {fileID: 0}
   m_EnableCollisions: 1
 --- !u!114 &114000011744501634
@@ -78,7 +76,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DrawMaterial: {fileID: 2100000, guid: 4b0f3315a044218428165ca0893aa0b5, type: 2}
-  drawVisualMeshes: 0
+  drawVisualMeshes: 1
 --- !u!114 &114000012342941982
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -98,6 +96,6 @@ MonoBehaviour:
   m_LOD: 1
   m_NumUpdatesBeforeRemoval: 10
   m_SecondsBetweenUpdates: 2.5
-  m_CurrentRenderSetting: 0
+  m_CurrentRenderSetting: 1
   m_CustomMaterial: {fileID: 15303, guid: 0000000000000000f000000000000000, type: 0}
   m_OcclusionMaterial: {fileID: 15302, guid: 0000000000000000f000000000000000, type: 0}

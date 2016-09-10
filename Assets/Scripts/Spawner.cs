@@ -13,7 +13,11 @@ public class Spawner : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
+	    if (GameObject.FindGameObjectWithTag("MainTower") == null)
+	        return;
+
+
 		time += Time.deltaTime;
 
 		if (time < intervalSeconds)

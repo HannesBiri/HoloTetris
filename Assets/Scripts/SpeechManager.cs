@@ -64,15 +64,12 @@ public class SpeechManager : MonoBehaviour
             {
                 if (hitInfo.transform.tag == "Tower")
                 {
+                    var exploder = hitInfo.transform.gameObject.GetComponent<MeshExploder>();
+                    {
+                        exploder.Explode();
+                        GameObject.Destroy(hitInfo.transform.gameObject);
+                    }
                 }
-
-                //Quaternion toQuat = Camera.main.transform.localRotation;
-
-                    // If the raycast hit a hologram...
-                    // Display the cursor mesh.
-                    var towerToPlace = Object.Instantiate(tower);
-                towerToPlace.transform.position = hitInfo.point;
-                //towerToPlace.transform.rotation = toQuat;
             }
         });
 

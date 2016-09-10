@@ -1,0 +1,33 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Custom for Visual Studio
+*.cs     diff=csharp
+
+# Standard to msysgit
+*.doc	 diff=astextplain
+*.DOC	 diff=astextplain
+*.docx diff=astextplain
+*.DOCX diff=astextplain
+*.dot  diff=astextplain
+*.DOT  diff=astextplain
+*.pdf  diff=astextplain
+*.PDF	 diff=astextplain
+*.rtf	 diff=astextplain
+*.RTF	 diff=astextplain
+*.png binary filter=lfs
+*.FBX binary filter=lfs
+*.blend binary filter=lfs
+*.tga binary filter=lfs
+*.jpg binary filter=lfs
+*.psd binary filter=lfs
+*.tif binary filter=lfs
+*.ogg binary filter=lfs
+*.mp3 binary filter=lfs
+*.ttf binary filter=lfs
+*.otf binary filter=lfs
+*.pdf binary filter=lfs
+*.bmp binary filter=lfs
+
+# Custom for UNITY
+*.meta diff=astextplain

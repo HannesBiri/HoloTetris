@@ -1,17 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class upgradeDamageAction : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+public class UpgradeSpeedAction : MonoBehaviour {
 
 	void OnMouseEnter() {
 		((Behaviour)this.gameObject.GetComponent("Halo")).enabled = true;
@@ -22,6 +12,6 @@ public class upgradeDamageAction : MonoBehaviour {
 	}
 
 	void OnMouseDown() {
-		Debug.LogWarning ("check and trigger damage upgrade!");
+		Debug.LogWarning ("check and trigger speed upgrade!");
 	}
 }

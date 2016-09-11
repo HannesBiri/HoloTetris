@@ -1,17 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class upgradeSpeedAction : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+public class SellAction : MonoBehaviour {
 
 	void OnMouseEnter() {
 		((Behaviour)this.gameObject.GetComponent("Halo")).enabled = true;
@@ -22,6 +12,6 @@ public class upgradeSpeedAction : MonoBehaviour {
 	}
 
 	void OnMouseDown() {
-		Debug.LogWarning ("check and trigger speed upgrade!");
+		Debug.LogWarning ("sell the tower and return some 'money'!");
 	}
 }

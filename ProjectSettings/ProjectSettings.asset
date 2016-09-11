@@ -361,18 +361,18 @@ PlayerSettings:
     23: ASTAR_NO_JSON;ASTAR_NO_ZIP
     24: ASTAR_NO_JSON;ASTAR_NO_ZIP
     25: ASTAR_NO_JSON;ASTAR_NO_ZIP
-  metroPackageName: Origami
+  metroPackageName: HoloDefense
   metroPackageVersion: 1.0.0.0
   metroCertificatePath: Assets/WSATestCertificate.pfx
   metroCertificatePassword: 
   metroCertificateSubject: Unicorn Productions
   metroCertificateIssuer: Unicorn Productions
   metroCertificateNotAfter: 005d2940712ad301
-  metroApplicationDescription: Origami
+  metroApplicationDescription: HoloDefense Game
   wsaImages:
     65636: 
     2031716: 
-  metroTileShortName: Origami
+  metroTileShortName: HoloDefense
   metroCommandLineArgsFile: 
   metroTileShowName: 0
   metroMediumTileShowName: 0

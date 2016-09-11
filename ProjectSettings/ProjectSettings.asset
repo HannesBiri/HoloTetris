@@ -367,7 +367,7 @@ PlayerSettings:
   metroCertificatePassword: 
   metroCertificateSubject: Unicorn Productions
   metroCertificateIssuer: Unicorn Productions
-  metroCertificateNotAfter: 005d2940712ad301
+  metroCertificateNotAfter: 808b1d9b272bd301
   metroApplicationDescription: HoloDefense Game
   wsaImages:
     65636: 

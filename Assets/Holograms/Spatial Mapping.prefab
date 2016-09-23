@@ -76,7 +76,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DrawMaterial: {fileID: 2100000, guid: 4b0f3315a044218428165ca0893aa0b5, type: 2}
-  drawVisualMeshes: 1
+  drawVisualMeshes: 0
 --- !u!114 &114000012342941982
 MonoBehaviour:
   m_ObjectHideFlags: 1

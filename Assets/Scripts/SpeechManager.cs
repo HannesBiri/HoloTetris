@@ -55,11 +55,9 @@ public class SpeechManager : MonoBehaviour
         {
             if (hitInfo.Value.transform.tag == "Tower")
             {
+                Destroy(hitInfo.Value.transform.gameObject);
                 var exploder = hitInfo.Value.transform.gameObject.GetComponent<MeshExploder>();
-                {
-                    exploder.Explode();
-                    GameObject.Destroy(hitInfo.Value.transform.gameObject);
-                }
+                exploder.Explode();
             }
         }
     }

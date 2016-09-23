@@ -19,12 +19,18 @@ public class TuretShoot : MonoBehaviour {
 
 	public List<GameObject> ennemies;
 
-	// Use this for initialization
-	void Start () {
+    public AudioClip shootSound;
+
+    private AudioSource audioSource;
+
+    // Use this for initialization
+    void Start ()
+    {
 		time = intervalSeconds;
 		savedfocuslocation = this.transform.position;
 		focusedDude = null;
-	}
+        audioSource = GetComponent<AudioSource>();
+    }
 	
 	// Update is called once per frame
 	void FixedUpdate () {
@@ -60,8 +66,10 @@ public class TuretShoot : MonoBehaviour {
 			//Debug.Log ("shoot at " + focusedDude.gameObject.name);
 
 			GameObject go = Instantiate (projectile);
+            if (shootSound != null)
+                audioSource.PlayOneShot(shootSound);
 
-			go.GetComponent<Projectile> ().target = focusedDude.gameObject.transform;
+            go.GetComponent<Projectile> ().target = focusedDude.gameObject.transform;
 			go.transform.position = canon.transform.position;
 
 			if (focusedDude.GetComponent<HealthSystem>().currentLife < 1) {
@@ -70,8 +78,6 @@ public class TuretShoot : MonoBehaviour {
 				return;
 			}
 		}
-
-
 	}
 
 	void RotateToward(Vector3 targetPos)

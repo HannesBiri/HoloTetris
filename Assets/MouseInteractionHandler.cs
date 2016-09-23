@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Linq;
 
 public class MouseInteractionHandler : MonoBehaviour
 {
@@ -33,6 +34,14 @@ public class MouseInteractionHandler : MonoBehaviour
             {
                 if (hitInfo.Value.transform.tag == "Tower")
                 {
+                    var exploders = hitInfo.Value.transform.gameObject.GetComponentsInChildren<MeshExploder>();
+                    if (exploders != null && exploders.Any())
+                    {
+                        foreach (var meshExploder in exploders)
+                        {
+                            meshExploder.Explode();
+                        }
+                    }
                     Destroy(hitInfo.Value.transform.gameObject);
                     var exploder = hitInfo.Value.transform.gameObject.GetComponent<MeshExploder>();
                     exploder.Explode();

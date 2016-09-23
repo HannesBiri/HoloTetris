@@ -53,6 +53,7 @@ GameObject:
   - 4: {fileID: 4000012119559042}
   - 33: {fileID: 33000013273642906}
   - 23: {fileID: 23000013915489374}
+  - 114: {fileID: 114000011276451794}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -69,7 +70,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013335171992}
   - 114: {fileID: 114000013949715838}
-  - 114: {fileID: 114000010406657510}
   - 65: {fileID: 65000014196226620}
   - 82: {fileID: 82000013862469076}
   m_Layer: 0
@@ -89,6 +89,7 @@ GameObject:
   - 4: {fileID: 4000012585852290}
   - 33: {fileID: 33000012447046010}
   - 23: {fileID: 23000011300626838}
+  - 114: {fileID: 114000010112019174}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -426,22 +427,46 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &114000010406657510
+--- !u!114 &114000010112019174
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012568685740}
+  m_GameObject: {fileID: 1000013422448966}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: abd71dcb0056342b08cb3e8851fac00b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  minSpeed: 1
-  maxSpeed: 5
-  minRotationSpeed: 90
-  maxRotationSpeed: 360
+  minSpeed: 0.1
+  maxSpeed: 2
+  minRotationSpeed: 20
+  maxRotationSpeed: 100
+  fadeWaitTime: 0.5
+  fadeTime: 2
+  useGravity: 1
+  colliderThickness: 0.125
+  useNormals: 0
+  useMeshBoundsCenter: 0
+  allowShadows: 0
+  shadersAlreadyHandleTransparency: 0
+--- !u!114 &114000011276451794
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012539441570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abd71dcb0056342b08cb3e8851fac00b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  minSpeed: 0.1
+  maxSpeed: 2
+  minRotationSpeed: 20
+  maxRotationSpeed: 100
   fadeWaitTime: 0.5
   fadeTime: 2
   useGravity: 1

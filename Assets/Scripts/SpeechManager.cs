@@ -7,83 +7,58 @@ using UnityEngine.Windows.Speech;
 public class SpeechManager : MonoBehaviour
 {
     KeywordRecognizer keywordRecognizer = null;
-    Dictionary<string, System.Action> keywords = new Dictionary<string, System.Action>();
+    readonly Dictionary<string, System.Action> keywords = new Dictionary<string, System.Action>();
 
     public Transform tower;  // inspector object to hold our tower
 
+    private HitHelper _hitHelper;
+    
     // Use this for initialization
     void Start()
     {
+        _hitHelper = new HitHelper();
+
         keywords.Add("Restart game", () =>
         {
-            // Call the OnReset method on every descendant object.
             SceneManager.LoadScene(0);
+            // Call the OnReset method on every descendant object.
             //this.BroadcastMessage("OnReset");
         });
 
-        keywords.Add("Pause game", () =>
-        {
-            // Call the OnReset method on every descendant object.
-            Time.timeScale = 0.01f;
-        });
+        keywords.Add("Pause game", () => { Time.timeScale = 0.01f; });
 
-        keywords.Add("Resume game", () =>
-        {
-            // Call the OnReset method on every descendant object.
-            //this.BroadcastMessage("OnReset");
-            Time.timeScale = 1.0f;
-        });
+        keywords.Add("Resume game", () => { Time.timeScale = 1.0f; });
 
         keywords.Add("Tower", PlaceTower);
 
         keywords.Add("Destroy", DestroyTower);
 
-        // Tell the KeywordRecognizer about our keywords.
         keywordRecognizer = new KeywordRecognizer(keywords.Keys.ToArray());
-
-        // Register a callback for the KeywordRecognizer and start recognizing!
         keywordRecognizer.OnPhraseRecognized += KeywordRecognizer_OnPhraseRecognized;
         keywordRecognizer.Start();
     }
 
     private void PlaceTower()
     {
-        // Do a raycast into the world based on the user's
-        // head position and orientation.
-        var headPosition = Camera.main.transform.position;
-        var gazeDirection = Camera.main.transform.forward;
-
-        RaycastHit hitInfo;
-
-        if (Physics.Raycast(headPosition, gazeDirection, out hitInfo))
+        var hitInfo = _hitHelper.GetHitInfo();
+        if (hitInfo != null)
         {
-            //Quaternion toQuat = Camera.main.transform.localRotation;
-
-            // If the raycast hit a hologram...
-            // Display the cursor mesh.
-            var towerToPlace = Object.Instantiate(tower);
-            towerToPlace.transform.position = hitInfo.point;
-            //towerToPlace.transform.rotation = toQuat;
+            var towerToPlace = Instantiate(tower);
+            towerToPlace.transform.position = hitInfo.Value.point;
         }
     }
 
     private void DestroyTower()
     {
-        // Do a raycast into the world based on the user's
-        // head position and orientation.
-        var headPosition = Camera.main.transform.position;
-        var gazeDirection = Camera.main.transform.forward;
-
-        RaycastHit hitInfo;
-
-        if (Physics.Raycast(headPosition, gazeDirection, out hitInfo))
+        var hitInfo = _hitHelper.GetHitInfo();
+        if (hitInfo != null)
         {
-            if (hitInfo.transform.tag == "Tower")
+            if (hitInfo.Value.transform.tag == "Tower")
             {
-                var exploder = hitInfo.transform.gameObject.GetComponent<MeshExploder>();
+                var exploder = hitInfo.Value.transform.gameObject.GetComponent<MeshExploder>();
                 {
                     exploder.Explode();
-                    GameObject.Destroy(hitInfo.transform.gameObject);
+                    GameObject.Destroy(hitInfo.Value.transform.gameObject);
                 }
             }
         }

@@ -33,6 +33,10 @@ public class SpeechManager : MonoBehaviour
 
         keywords.Add("Destroy", DestroyTower);
 
+        keywords.Add("Upgrade", UpgradeTower);
+
+        keywords.Add("Menue", OpenMenue);
+
         keywordRecognizer = new KeywordRecognizer(keywords.Keys.ToArray());
         keywordRecognizer.OnPhraseRecognized += KeywordRecognizer_OnPhraseRecognized;
         keywordRecognizer.Start();
@@ -48,6 +52,12 @@ public class SpeechManager : MonoBehaviour
         }
     }
 
+    private void OpenMenue()
+    {
+        var hitInfo = _hitHelper.GetHitInfo();
+        /* missing function to open Main Menue */
+    }
+
     private void DestroyTower()
     {
         var hitInfo = _hitHelper.GetHitInfo();
@@ -58,6 +68,18 @@ public class SpeechManager : MonoBehaviour
                 Destroy(hitInfo.Value.transform.gameObject);
                 var exploder = hitInfo.Value.transform.gameObject.GetComponent<MeshExploder>();
                 exploder.Explode();
+            }
+        }
+    }
+
+    private void UpgradeTower()
+    {
+        var hitInfo = _hitHelper.GetHitInfo();
+        if (hitInfo != null)
+        {
+            if (hitInfo.Value.transform.tag == "Tower")
+            {
+                /* missing launch of menue on tower for upgrade */
             }
         }
     }

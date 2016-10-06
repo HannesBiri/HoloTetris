@@ -44,7 +44,8 @@ public class MouseInteractionHandler : MonoBehaviour
                     }
                     Destroy(hitInfo.Value.transform.gameObject);
                     var exploder = hitInfo.Value.transform.gameObject.GetComponent<MeshExploder>();
-                    exploder.Explode();
+                    if (exploder != null)
+                        exploder.Explode();
                 }
             }
         }

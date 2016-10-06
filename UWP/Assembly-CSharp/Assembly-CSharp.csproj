@@ -130,7 +130,7 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:/Users/Hannes/Downloads/HoloTetris/Assets\..\UWP\Assembly-CSharp-firstpass\Assembly-CSharp-firstpass.csproj">
+    <ProjectReference Include="C:/Users/moham/git/HoloDefense/HoloTetris/Assets\..\UWP\Assembly-CSharp-firstpass\Assembly-CSharp-firstpass.csproj">
       <Project>{194d914d-0664-444e-b663-4d0f1c80af68}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
@@ -142,24 +142,24 @@
       <HintPath>$(SolutionDir)$(SolutionName)\Unprocessed\WinRTLegacy.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Pathfinding.ClipperLib">
-      <HintPath>$(SolutionDir)$(SolutionName)\Unprocessed\Pathfinding.ClipperLib.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>$(SolutionDir)$(SolutionName)\Unprocessed\UnityEngine.UI.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine.HoloLens">
-      <HintPath>$(SolutionDir)$(SolutionName)\Unprocessed\UnityEngine.HoloLens.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Pathfinding.Poly2Tri">
       <HintPath>$(SolutionDir)$(SolutionName)\Unprocessed\Pathfinding.Poly2Tri.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEngine.HoloLens">
+      <HintPath>$(SolutionDir)$(SolutionName)\Unprocessed\UnityEngine.HoloLens.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="UnityEngine.Networking">
       <HintPath>$(SolutionDir)$(SolutionName)\Unprocessed\UnityEngine.Networking.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Pathfinding.ClipperLib">
+      <HintPath>$(SolutionDir)$(SolutionName)\Unprocessed\Pathfinding.ClipperLib.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.VR">

@@ -1,7 +1,0 @@
-Assembly-CSharp.dll
-Pathfinding.ClipperLib.dll
-UnityEngine.UI.dll
-UnityEngine.HoloLens.dll
-Pathfinding.Poly2Tri.dll
-UnityEngine.Networking.dll
-UnityEngine.VR.dll

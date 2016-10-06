@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Assets.Scripts;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Windows.Speech;
@@ -44,6 +45,8 @@ public class SpeechManager : MonoBehaviour
         if (hitInfo != null)
         {
             var towerToPlace = Instantiate(tower);
+            BroadcastMessage(Constants.LooseMoney, 40.0f, SendMessageOptions.DontRequireReceiver);
+
             towerToPlace.transform.position = hitInfo.Value.point;
         }
     }

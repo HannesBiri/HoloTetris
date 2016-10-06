@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Assets.Scripts;
 
 public class HealthSystem : MonoBehaviour {
 
@@ -29,6 +30,8 @@ public class HealthSystem : MonoBehaviour {
             this.gameObject.SetActive(false);
 
             Destroy(this.gameObject, 0.1f);
+
+            BroadcastMessage(Constants.EarnMoney, 10.0f, SendMessageOptions.DontRequireReceiver);
         }
 	}
 }

@@ -362,6 +362,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000010278848730}
   - 114: {fileID: 114000014073397926}
+  - 114: {fileID: 114000011011077082}
+  - 114: {fileID: 114000010533222846}
+  - 114: {fileID: 114000012610750568}
   m_Layer: 0
   m_Name: Tower2
   m_TagString: MainTower
@@ -12840,6 +12843,43 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114000010533222846
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010540125260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8538ef9c8fe304d428f89f10af7dbe3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentMoney: 100
+  MaxMoney: 300
+--- !u!114 &114000011011077082
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010540125260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f43c1d1782e9a3448ab49badba2472c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 0}
+--- !u!114 &114000012610750568
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010540125260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b293464234de00241aae52fc6a53837c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moneyBar: {fileID: 0}
 --- !u!114 &114000014073397926
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12853,3 +12893,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentLife: 0
   maxLife: 300
+  explosionEffect: {fileID: 1000012204676094, guid: 9287315323febf14baf4f48c6a17eac2,
+    type: 2}

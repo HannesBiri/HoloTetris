@@ -3,10 +3,14 @@ using System.Collections;
 
 public class MoneyManager : MonoBehaviour
 {
-    public int InitialMoney = 100;
-
     public int CurrentMoney = 100;
+    public float MaxMoney = 300;
 
+
+    public void EarnMoney()
+    {
+        
+    }
     public void Charge(int ammount)
     {
         if (CurrentMoney >= ammount)

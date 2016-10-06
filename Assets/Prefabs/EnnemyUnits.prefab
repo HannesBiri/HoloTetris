@@ -569,7 +569,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentLife: 0
   maxLife: 100
-  explosionEffect: {fileID: 198000011308320650, guid: 9287315323febf14baf4f48c6a17eac2,
+  explosionEffect: {fileID: 1000012204676094, guid: 9287315323febf14baf4f48c6a17eac2,
     type: 2}
 --- !u!114 &114000011329320064
 MonoBehaviour:

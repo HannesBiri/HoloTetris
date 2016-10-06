@@ -83,7 +83,10 @@ public class TuretShoot : MonoBehaviour {
 	void RotateToward(Vector3 targetPos)
     {
         Vector3 directionX = transform.position - targetPos;
-		headTurret.transform.rotation = Quaternion.Slerp(headTurret.transform.rotation, 
-            Quaternion.LookRotation(directionX, transform.up), 30f);
+       
+	    var rotation = Quaternion.LookRotation(directionX, transform.up);
+        rotation *= Quaternion.Euler(0, -90, 0); // this add a -90 degrees Y rotation
+
+        headTurret.transform.rotation = Quaternion.Slerp(headTurret.transform.rotation, rotation, 30f);
     }
 }

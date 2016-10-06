@@ -30,7 +30,10 @@ public class SpeechManager : MonoBehaviour
 
         keywords.Add("Resume game", () => { Time.timeScale = 1.0f; });
 
+        // for placing towers
         keywords.Add("Tower", PlaceTower);
+        keywords.Add("Build", PlaceTower);
+        keywords.Add("Place", PlaceTower);
 
         keywords.Add("Destroy", DestroyTower);
 

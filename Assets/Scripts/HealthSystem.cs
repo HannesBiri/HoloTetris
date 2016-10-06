@@ -22,13 +22,13 @@ public class HealthSystem : MonoBehaviour {
 		Debug.Log (name + "got hitted");
 		currentLife -= 20;
 
-        if (currentLife == 0)
+        if (currentLife <= 1 && gameObject.activeSelf)
         {
             Instantiate(explosionEffect, this.transform.position, this.transform.rotation);
             Debug.Log("explosion");
             this.gameObject.SetActive(false);
-            Destroy(this.gameObject, 2);
-        }
 
+            Destroy(this.gameObject, 0.1f);
+        }
 	}
 }

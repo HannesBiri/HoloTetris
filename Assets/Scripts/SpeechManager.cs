@@ -55,6 +55,8 @@ public class SpeechManager : MonoBehaviour
             BroadcastMessage(Constants.LooseMoney, 40.0f, SendMessageOptions.DontRequireReceiver);
 
             towerToPlace.transform.position = hitInfo.Value.point;
+			// Parent it to the stage transform so it does move with it !
+			towerToPlace.transform.parent = this.transform;
         }
     }
 

@@ -24,6 +24,8 @@ public class MouseInteractionHandler : MonoBehaviour
             {
                 var towerToPlace = Instantiate(tower);
                 towerToPlace.transform.position = hitInfo.Value.point;
+				// Parent it to the stage transform so it does move with it !
+				towerToPlace.transform.parent = this.transform;
             }
         }
 
